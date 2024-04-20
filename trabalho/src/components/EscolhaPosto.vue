@@ -34,7 +34,7 @@
     </router-link>
   </div>
   <div class="postoeletrico">
-    <router-link to="/serviço-atribuido-e">
+    <router-link to="/serviço-atribuido-eletrico">
       <div class="circular-imageeletrico">
         <img src="../images/imagempostoeletrico.jpg" alt="Imagem Posto Eletrico">
       </div>
