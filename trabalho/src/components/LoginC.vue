@@ -1,7 +1,7 @@
 
 
 <template>
-    <div id="serviçoatribuidoapp">
+    <div id="loginapp">
         <div class="imagemoficina">
             <img src="../images/imagemoficina.jpg" alt="Imagem Oficina">
         </div>
@@ -17,7 +17,7 @@
             <div class="distancia">
                 <input type="text" v-model="username" placeholder="Identificador"/>
                 <input type="text" v-model="password" placeholder="Password"/>
-                <button v-on:click="login"> Login</button>
+                <button v-on:click="login">Login</button>
             </div>
         </div>
         <div class="circular-imagecombustao">
@@ -29,7 +29,7 @@
 <script>
 import axios from 'axios'
 export default {
-    name: "ServiçoAtribuidoC",
+    name: "LoginC",
     data(){
         return {
             username:'',
@@ -49,6 +49,7 @@ export default {
             .then(response => {
                 if (response.data.length > 0) {
                     alert('Login successful!');
+                    this.$router.push('/serviço-atribuido-combustao/serviço');
                 } else {
                     alert('Invalid username or password!');
                 }

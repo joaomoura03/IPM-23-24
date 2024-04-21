@@ -1,7 +1,7 @@
 
 
 <template>
-    <div id="serviçoatribuidoapp">
+    <div id="loginapp">
         <div class="imagemoficina">
             <img src="../images/imagemoficina.jpg" alt="Imagem Oficina">
         </div>
@@ -17,19 +17,20 @@
             <div class="distancia">
                 <input type="text" v-model="username" placeholder="Identificador"/>
                 <input type="text" v-model="password" placeholder="Password"/>
-                <button v-on:click="login"> Login</button>
+                <button v-on:click="login">Login</button>
             </div>
         </div>
-        <div class="circular-imageeletrico">
-            <img src="../images/imagempostoeletrico.jpg" alt="Imagem Posto Elétrico">
+        <div class="circular-imagegeral">
+            <img src="../images/imagempostogeral.jpg" alt="Imagem Posto Geral">
         </div>
     </div>
 </template>
 
+
 <script>
 import axios from 'axios'
 export default {
-    name: "ServiçoAtribuidoE",
+    name: "LoginG",
     data(){
         return {
             username:'',
@@ -43,7 +44,7 @@ export default {
                 params: {
                     username: this.username,
                     password: this.password,
-                    posto: "eletrico"
+                    posto: "geral"
                 }
             })
             .then(response => {
@@ -114,7 +115,7 @@ export default {
         margin-left: 75px;
     }
 
-    .circular-imageeletrico {
+    .circular-imagegeral {
         width: 250px;
         height: 250px;
         margin-left: 285px;
@@ -124,7 +125,7 @@ export default {
         z-index: 2;
     }
 
-    .circular-imageeletrico img {
+    .circular-imagegeral img {
         width: 100%;    
         height: 100%;
         object-fit: cover; /* Maintains aspect ratio and covers the container */

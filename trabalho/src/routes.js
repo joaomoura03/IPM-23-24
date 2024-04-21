@@ -1,23 +1,29 @@
-import ServiçoAtribuidoC from './components/ServiçoAtribuidoC.vue'
-import ServiçoAtribuidoG from './components/ServiçoAtribuidoG.vue'
-import ServiçoAtribuidoE from './components/ServiçoAtribuidoE.vue'
+import LoginC from './components/LoginC.vue'
+import LoginG from './components/LoginG.vue'
+import LoginE from './components/LoginE.vue'
 import EscolhaPosto from './components/EscolhaPosto.vue'
+import Serviço from './components/Serviço.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
-        name:'ServiçoAtribuidoC',
-        component:ServiçoAtribuidoC,
+        name:'Serviço',
+        component:Serviço,
+        path:'/serviço-atribuido-combustao/serviço'
+    },
+    {
+        name:'LoginC',
+        component:LoginC,
         path:'/serviço-atribuido-combustao'
     },
     {
-        name:'ServiçoAtribuidoG',
-        component:ServiçoAtribuidoG,
+        name:'LoginG',
+        component:LoginG,
         path:'/serviço-atribuido-geral'
     },
     {
-        name:'ServiçoAtribuidoE',
-        component:ServiçoAtribuidoE,
+        name:'LoginE',
+        component:LoginE,
         path:'/serviço-atribuido-eletrico'
     },
     {

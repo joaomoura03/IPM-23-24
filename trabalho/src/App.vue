@@ -1,16 +1,18 @@
 
 <script>
 import EscolhaPosto from './components/EscolhaPosto.vue';
-import ServiçoAtribuidoC from './components/ServiçoAtribuidoC.vue';
-import ServiçoAtribuidoG from './components/ServiçoAtribuidoG.vue';
-import ServiçoAtribuidoE from './components/ServiçoAtribuidoE.vue';
+import LoginC from './components/LoginC.vue';
+import LoginG from './components/LoginG.vue';
+import LoginE from './components/LoginE.vue';
+import Serviço from './components/Serviço.vue'
 
 export default {
   components: {
     EscolhaPosto,
-    ServiçoAtribuidoC,
-    ServiçoAtribuidoG,
-    ServiçoAtribuidoE
+    LoginC,
+    LoginG,
+    LoginE,
+    Serviço
   }
 }
 </script>

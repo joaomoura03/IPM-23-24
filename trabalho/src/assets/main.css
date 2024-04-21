@@ -16,7 +16,7 @@ body {
   background-color: #7c7c7c;
 }
 
-#serviçoatribuidoapp {
+#loginapp {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -36,4 +36,12 @@ h3 {
   top: 3%;
   left: 15%;
   transform: translate(-50%, -50%);
+}
+
+#serviço {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #7c7c7c;
+  background-image: linear-gradient(to bottom, #d9d9d9 22%, #7c7c7c 0%);
 }
