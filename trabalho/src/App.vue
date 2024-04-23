@@ -4,7 +4,9 @@ import EscolhaPosto from './components/EscolhaPosto.vue';
 import LoginC from './components/LoginC.vue';
 import LoginG from './components/LoginG.vue';
 import LoginE from './components/LoginE.vue';
-import Serviço from './components/Serviço.vue'
+import ServiçoEspera from './components/ServiçoEspera.vue'
+import ServiçoAgendada from './components/ServiçoAgendada.vue'
+import DetalhesServiço from './components/DetalhesServiço.vue'
 
 export default {
   components: {
@@ -12,7 +14,10 @@ export default {
     LoginC,
     LoginG,
     LoginE,
-    Serviço
+    ServiçoEspera,
+    ServiçoAgendada,
+    DetalhesServiço
+
   }
 }
 </script>

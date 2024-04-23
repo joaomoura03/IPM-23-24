@@ -230,28 +230,28 @@
         {
             "id": "08-25-AA",
             "clientId": "123",
-            "vehicle-typeId": "gasolina",
+            "vehicletypeId": "gasolina",
             "cilindrada": 1000,
             "kms": 200000
         },
         {
             "id": "AH-31-BB",
             "clientId": "124",
-            "vehicle-typeId": "gasoleo",
+            "vehicletypeId": "gasoleo",
             "cilindrada": 2000,
             "kms": 120000
         },
         {
             "id": "AH-32-44",
             "clientId": "123",
-            "vehicle-typeId": "eletrico",
+            "vehicletypeId": "eletrico",
             "potencia": 200,
             "kms": 20000
         },
         {
             "id": "AH-21-25",
             "clientId": "125",
-            "vehicle-typeId": "hibrido",
+            "vehicletypeId": "hibrido",
             "cilindrada": 1000,
             "potencia": 200,
             "kms": 80000

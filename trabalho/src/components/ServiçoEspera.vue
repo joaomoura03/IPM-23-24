@@ -11,20 +11,28 @@
                     <button><strong>Logout</strong></button>
             </router-link>
         </div>
-        <div>
-            <h2>List of Service Definitions</h2>
-            <ul>
-                <li v-for="service in services" :key="service.id">
-                    <b>ID:</b> {{ service.id }}<br>
-                    <b>Vehicle ID:</b> {{ service.vehicleId }}<br>
-                    <b>Service Definition ID:</b> {{ service['service-definitionId'] }}<br>
-                    <b>Status:</b> {{ service.estado }}<br>
-                    <b>Scheduled:</b> {{ service.agendamento }}<br>
-                    <b>Description:</b> {{ service.descrição }}<br>
-                    <b>Scheduled Date:</b> {{ formattedDate(service.data) }}<br>
-                </li>
-            </ul>
-        </div> 
+        <div class="botaotroca">
+            <router-link to="/serviço-atribuido-combustao/serviço-agendada">
+                    <button><strong>Espera</strong></button>
+            </router-link>
+        </div>
+        <div class="listservices">
+            <div class="horizontal-list">
+                <ul>
+                    <li v-for="service in services" :key="service.id">
+                        <div v-if="service.agendamento === 'filaDeEspera' && service.estado === 'nafila'">
+                            <b>ID:</b> {{ service.id }}<br>
+                            <b>Vehicle ID:</b> {{ service.vehicleId }}<br>
+                            <b>Service Definition ID:</b> {{ service['service-definitionId'] }}<br>
+                            <b>Status:</b> {{ service.estado }}<br>
+                            <b>Scheduled:</b> {{ service.agendamento }}<br>
+                            <b>Description:</b> {{ service.descrição }}<br>
+                            <button @click="getVehicle(service.vehicleId)">View Vehicle Details</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div> 
 </template>
 
@@ -32,10 +40,10 @@
 <script>
 import axios from 'axios';
 export default {
-    name:"Serviço",
+    name:"ServiçoEspera",
     data() {
         return {
-            services: []
+            services: [],
         };
     },
     mounted() {
@@ -56,13 +64,33 @@ export default {
             if (!dateObj) return '';
             const { dia, mes, ano, hora, minutos } = dateObj;
             return `${dia}/${mes}/${ano} ${hora}:${minutos}`;
-        }   
+        },
+        getVehicle(vehicleId) {
+            this.$router.push(`/serviço-atribuido-combustao/detalhes/${vehicleId}`);
+        }
     }
 };
 </script>
 
 
 <style scoped>
+
+    .botaotroca button{
+        width: 200px;
+        height: 100px;
+        margin-left: -200px;
+        margin-top: 260px;
+        font-size: 48px;
+        background-color: skyblue;
+        border: transparent;
+        color: black;       
+    }
+    .listservices {
+        display: flex;
+        font-size: 1rem;
+        transform: translate( -650%, 50%);
+    }
+
     .circular-imagecombustao {
         width: 200px;
         height: 200px;

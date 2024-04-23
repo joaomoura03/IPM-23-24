@@ -49,7 +49,7 @@ export default {
             .then(response => {
                 if (response.data.length > 0) {
                     alert('Login successful!');
-                    this.$router.push('/serviço-atribuido-combustao/serviço');
+                    this.$router.push('/serviço-atribuido-combustao/serviço-espera');
                 } else {
                     alert('Invalid username or password!');
                 }
